@@ -155,6 +155,8 @@ else()
                 --validate 
     )
 endif()
+
+if (USD_BUILD_TESTS)
         
 pxr_build_test(testGfHardToReach
     LIBRARIES
@@ -284,3 +286,5 @@ pxr_register_test(testGfCamera
     PYTHON
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testGfCamera"
 )
+
+endif (USD_BUILD_TESTS)

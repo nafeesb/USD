@@ -145,6 +145,7 @@ pxr_shared_library(hd
         shaders/renderPassShader.glslfx
 )
 
+if (USD_BUILD_TESTS)
 if (QT4_FOUND)
     pxr_build_test(testHdBasicDrawing
         LIBRARIES
@@ -158,3 +159,4 @@ if (QT4_FOUND)
             testenv/testHdBasicDrawing.cpp
     )
 endif()
+endif (USD_BUILD_TESTS)

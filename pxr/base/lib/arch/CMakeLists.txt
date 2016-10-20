@@ -49,6 +49,8 @@ pxr_shared_library(arch
         initConfig.cpp
 )
 
+if (USD_BUILD_TESTS)
+
 pxr_build_test_shared_lib(testArchAbiPlugin
     CPPFILES
         testenv/testArchAbiPlugin.cpp
@@ -183,3 +185,5 @@ pxr_register_test(testArchThreads
 pxr_register_test(testArchVsnprintf
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testArchVsnprintf"
 )
+
+endif (USD_BUILD_TESTS)

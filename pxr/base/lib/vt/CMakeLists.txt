@@ -58,6 +58,7 @@ pxr_shared_library(vt
     __init__.py
 )
 
+if (USD_BUILD_TESTS)
 pxr_build_test(testVtCpp
     LIBRARIES
         tf
@@ -86,3 +87,5 @@ pxr_register_test(testVtFunctions
 pxr_register_test(testVtCpp
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testVtCpp"
 )
+
+endif (USD_BUILD_TESTS)

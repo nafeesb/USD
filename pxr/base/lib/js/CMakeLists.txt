@@ -16,6 +16,8 @@ pxr_shared_library(js
         types.h
 )
 
+if (USD_BUILD_TESTS)
+
 pxr_build_test(testJsIO
     LIBRARIES
         tf
@@ -98,3 +100,5 @@ pxr_register_test(testJsUtils
     COMMAND 
         "${CMAKE_INSTALL_PREFIX}/tests/testJsUtils"
 )
+
+endif (USD_BUILD_TESTS)

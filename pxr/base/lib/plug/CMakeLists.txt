@@ -46,6 +46,8 @@ pxr_shared_library(plug
         __init__.py
 )
 
+if (USD_BUILD_TESTS)
+
 pxr_test_scripts(
     testPlug.py
 )
@@ -146,3 +148,4 @@ pxr_register_test(testPlug
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testPlug"
 )
 
+endif (USD_BUILD_TESTS)

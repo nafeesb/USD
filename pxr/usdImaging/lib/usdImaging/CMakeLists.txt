@@ -93,6 +93,7 @@ pxr_shared_library(usdImaging
         plugInfo.json
 )
 
+if (USD_BUILD_TESTS)
 if (QT4_FOUND)
     pxr_build_test(testUsdImagingBasicDrawing
         LIBRARIES
@@ -110,3 +111,4 @@ if (QT4_FOUND)
             testenv/testUsdImagingBasicDrawing.cpp
     )
 endif()
+endif (USD_BUILD_TESTS)

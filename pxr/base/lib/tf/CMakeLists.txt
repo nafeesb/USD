@@ -196,6 +196,8 @@ pxr_shared_library(tf
         testenv/testTfScriptModuleLoader_Unknown.py
 )
 
+if (USD_BUILD_TESTS)
+
 pxr_build_test(testTfPyFunction
     LIBRARIES
         tf
@@ -627,3 +629,5 @@ pxr_register_test(testTf_PyStaticTokens
 pxr_register_test(testTfCxxCast
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testTfCast"
 )
+
+endif (USD_BUILD_TESTS)

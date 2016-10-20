@@ -6,6 +6,8 @@ else()
     cmake_minimum_required(VERSION 2.8.8)
 endif()
 
+set (USD_BUILD_TESTS ON CACHE BOOL "Build the unit tests")
+
 set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake/defaults
                       ${CMAKE_SOURCE_DIR}/cmake/modules
                       ${CMAKE_SOURCE_DIR}/cmake/macros)

@@ -31,6 +31,8 @@ pxr_shared_library(work
         __init__.py
 )
 
+if (USD_BUILD_TESTS)
+
 pxr_build_test(testWorkDispatcher
     LIBRARIES
         work
@@ -73,3 +75,5 @@ pxr_register_test(testWorkThreadLimitsRawTBB2
     ENV PXR_WORK_THREAD_LIMIT=2
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testWorkThreadLimits --rawtbb"
 )
+
+endif (USD_BUILD_TESTS)
